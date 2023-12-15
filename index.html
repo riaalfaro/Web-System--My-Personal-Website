@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d25df3105d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="IMAGES/logo.png" width="20%" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#About">About Me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contacts</a></li>
+                <i class="fa-solid fa-xxmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>LET'S EXPLORE!</p>
+            <h1>Welcome!<br>I'm <span>Ria Mae Alfaro,</span><br>
+                Let's discover and explore with ease, navigate<br> 
+                with confidence on My Personal Website.</h1>
+        </div>
+    </div>
+</div>
+<div id="About">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="IMAGES/user.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>HI! I'm Ria Mae Alfaro, a friendly and approachable person. I want to expand myself and
+                   explore. My skills may be limited, but I'm eager to learn more. My willingness to go with
+                   others and get along with them will help me to expand and explore a new world and challenge
+                   my capability of being who I am and what I can do. That sounds very interesting to me, and it
+                   challenges me a lot. I believe that knowledge is power. Let's work together and learn more!</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Adaptability</span><br>Open-Mindedness</li>
+                        <li><span>Patience and Attentiveness</span><br>Active Listening</li>
+                        <li><span>Decision-making</span><br>Creativity</li>
+                        <li><span>Computer Literate</span><br>Problem Solving</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Coffee shop</span><br>Bartender</li>
+                        <li><span>Mayor's Office</span><br>Assited the Mayor's visitors and clients</li>
+                        <li><span>SPES <br>(Special Program for Employment of Students)</span><br>Encoder</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2009-2010</span><br>Paluan Central School Daycare</li>
+                        <li><span>2011-2016</span><br>Paluan Central High School</li>
+                        <li><span>2017-2022</span><br>Paluan National High School</li>
+                        <li><span>2022-Present</span><br>Rizal Technological University</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">Portfolio</h1>
+        <div class="work-list">
+            <div class="work">
+            </div>
+            <div class="work">
+                <img src="IMAGES/work.jpg">
+                <div class="layer">
+                    <h3>DESCRIPTION PROJECT</h3>
+                    <p>A parking management, system offer<br>
+                    digital vehicle location information,<br> 
+                    reducing confusion and anxiety, with a login<br> 
+                    system for registration and a forgot<br>
+                    password feature for students.<br>*GROUP WORK*</p>
+                    <a href="IMAGES/RTU-PARKING-SYSTEM.pdf"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contacts</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>riamaerectoalfaro20@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i>0986579876</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/riamae.alfaro.5?mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://instagram.com/ria_alfaro?igshid=aTc4ejhzM3Axdnd1"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://x.com/riamaealfaro?t=ec1GeK2D1UVE_xJJxXl0NA&s=07"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/@riamaealfaro"><i class="fab fa-youtube"></i></a>
+                </div>
+                <a href="IMAGES/RTU-PARKING-SYSTEM.pdf" download class="btn btn2">Download Work</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Ria Mae Alfaro </p>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+    sidemeu.style.right = "-200px";
+    }
+
+
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzmXox2QTwXrr4bhS7P15ML-dWSmL9XwJ7mJCz4O713mXtJaoiTrmQPPXf6VGuqkgAGwg/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "MESSAGE SENT SUCCESSFULLY!"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+</html>
